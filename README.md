@@ -8,240 +8,98 @@ Keep in mind that, although this is intended to be a comprehensive list, the sou
 
 - [Summary](#summary)
 - [Table of contents](#table-of-contents)
-- [Blockchain](#blockchain)
-  - [Navigating the Unknown](#navigating-the-unknown)
-  - [Shooting 101](#shooting-101)
-  - [The Art of Deception](#the-art-of-deception)
-- [Cryptography](#cryptography)
-  - [Ancient Encodings](#ancient-encodings)
-  - [Elliptic Labyrinth](#elliptic-labyrinth)
-  - [Elliptic Labyrinth Revenge](#elliptic-labyrinth-revenge)
-  - [Biased Heritage](#biased-heritage)
-  - [Colliding Heritage](#colliding-heritage)
-  - [Converging Visions](#converging-visions)
-  - [Inside the Matrix](#inside-the-matrix)
-  - [Multipage Recyclings](#multipage-recyclings)
-  - [Perfect Synchronization](#perfect-synchronization)
-  - [Small StEps](#small-steps)
-- [Forensics](#forensics)
-  - [Artifacts of Dangerous Sightings](#artifacts-of-dangerous-sightings)
-  - [Bashic Ransomware](#bashic-ransomware)
-  - [Interstellar C2](#interstellar-c2)
-  - [Pandoras Bane](#pandoras-bane)
-  - [Relic Maps](#relic-maps)
-  - [Alien Cradle](#alien-cradle)
-  - [Extraterrestrial Persistence](#extraterrestrial-persistence)
-  - [Packet Cyclone](#packet-cyclone)
-  - [Plaintext Tleasure](#plaintext-tleasure)
-  - [Roten](#roten)
-- [Hardware](#hardware)
-  - [Critical Flight](#critical-flight)
-  - [Debug](#debug)
-  - [HM74](#hm74)
-  - [Secret Code](#secret-code)
-  - [Timed Transmission](#timed-transmission)
-- [Machine Learning](#machine-learning)
-  - [Reading the Stars](#reading-the-stars)
-  - [Last Hope](#last-hope)
-  - [Mysterious Learnings](#mysterious-learnings)
-  - [On the Rescue](#on-the-rescue)
-  - [Reconfiguration](#reconfiguration)
-  - [Vision Chip](#vision-chip)
-- [Misc](#misc)
-  - [Hijack](#hijack)
-  - [Persistence](#persistence)
-  - [Remote Computation](#remote-computation)
-  - [Restricted](#restricted)
-  - [Calibration](#calibration)
-  - [Janken](#janken)
-  - [Nehebkaus Trap](#nehebkaus-trap)
-  - [The Chasms Crossing Conondrum](#the-chasms-crossing-conondrum)
-- [Pwn](#pwn)
-  - [Getting Started](#getting-started)
-  - [Questionnaire](#questionnaire)
-  - [Initialise Connection](#initialise-connection)
-  - [Labyrinth](#labyrinth)
-  - [Pandoras Box](#pandoras-box)
-  - [Control Room](#control-room)
-  - [Kana](#kana)
-  - [Math Door](#math-door)
-  - [Runic](#runic)
-  - [Void](#void)
-- [Reversing](#reversing)
-  - [Shattered Tablet](#shattered-tablet)
-  - [She Shells C Shells](#she-shells-c-shells)
-  - [Needle in a Haystack](#needle-in-a-haystack)
-  - [Hunting License](#hunting-license)
-  - [Alien Saboteur](#alien-saboteur)
-  - [Cave System](#cave-system)
-  - [Vessel Cartographer](#vessel-cartographer)
-- [Web](#web)
-  - [Gunhead](#gunhead)
-  - [Orbital](#orbital)
-  - [Passman](#passman)
-  - [Trapped Source](#trapped-source)
-  - [TrapTrack](#traptrack)
-  - [Didactic Octo Paddle](#didactic-octo-paddle)
-  - [Drobots](#drobots)
-  - [SpyBug](#spybug)
-  - [UnEarthly Shop](#unearthly-shop)
-- [References](#references)
-
-# Blockchain
-
-## Navigating the Unknown
-
-## Shooting 101
-
-## The Art of Deception
-
-# Cryptography
-
-## Ancient Encodings
-
-## Elliptic Labyrinth
-
-## Elliptic Labyrinth Revenge
-
-## Biased Heritage
-
-## Colliding Heritage
-
-## Converging Visions
-
-## Inside the Matrix
-
-## Multipage Recyclings
-
-## Perfect Synchronization
-
-## Small StEps
-
-# Forensics
-
-## Artifacts of Dangerous Sightings
-
-## Bashic Ransomware
-
-## Interstellar C2
-
-## Pandoras Bane
-
-## Relic Maps
-
-## Alien Cradle
-
-## Extraterrestrial Persistence
-
-## Packet Cyclone
-
-## Plaintext Tleasure
-
-## Roten
-
-# Hardware
-
-## Critical Flight
-
-## Debug
-
-## HM74
-
-## Secret Code
-
-## Timed Transmission
-
-# Machine Learning
-
-## Reading the Stars
-
-## Last Hope
-
-## Mysterious Learnings
-
-## On the Rescue
-
-## Reconfiguration
-
-## Vision Chip
-
-# Misc
-
-## Hijack
-
-## Persistence
-
-## Remote Computation
-
-## Restricted
-
-## Calibration
-
-## Janken
-
-## Nehebkaus Trap
-
-## The Chasms Crossing Conondrum
-
-# Pwn
-
-## Getting Started
-
-## Questionnaire
-
-## Initialise Connection
-
-## Labyrinth
-
-## Pandoras Box
-
-## Control Room
-
-## Kana
-
-## Math Door
-
-## Runic
-
-## Void
-
-# Reversing
-
-## Shattered Tablet
-
-## She Shells C Shells
-
-## Needle in a Haystack
-
-## Hunting License
-
-## Alien Saboteur
-
-## Cave System
-
-## Vessel Cartographer
-
-# Web
-
-## Gunhead
-
-## Orbital
-
-## Passman
-
-## Trapped Source
-
-## TrapTrack
-
-## Didactic Octo Paddle
-
-## Drobots
-
-## SpyBug
-
-## UnEarthly Shop
-
-# References
+- [Write ups](#write-ups)
+
+# Write ups
+
+- Blockchain
+  - Navigating the Unknown
+  - Shooting 101
+  - The Art of Deception
+
+- Cryptography
+  - Ancient Encodings
+  - Elliptic Labyrinth
+  - Elliptic Labyrinth Revenge
+  - Biased Heritage
+  - Colliding Heritage
+  - Converging Visions
+  - Inside the Matrix
+  - Multipage Recyclings
+  - Perfect Synchronization
+  - Small StEps
+
+- Forensics
+  - Artifacts of Dangerous Sightings
+  - Bashic Ransomware
+  - Interstellar C2
+  - Pandora's Bane
+  - Relic Maps
+  - Alien Cradle
+  - Extraterrestrial Persistence
+  - Packet Cyclone
+  - Plaintext Tleasure
+  - Roten
+  - 
+
+- Hardware
+  - Critical Flight
+  - Debug
+  - HM74
+  - Secret Code
+  - Timed Transmission
+
+- Machine Learning
+  - Reading the Stars
+  - Last Hope
+  - Mysterious Learnings
+  - On the Rescue
+  - Reconfiguration
+  - Vision Chip
+
+- Misc
+  - Hijack
+  - Persistence
+  - Remote Computation
+  - Restricted
+  - Calibration
+  - Janken
+  - Nehebkaus Trap
+  - The Chasms Crossing Conondrum
+
+- Pwn
+  - [Getting Started](Getting-Started)
+  - Questionnaire
+  - Initialise Connection
+  - Labyrinth
+  - Pandora's Box
+  - Control Room
+  - Kana
+  - Math Door
+  - Runic
+  - Void
+
+- Reversing
+  - Shattered Tablet
+  - She Shells C Shells
+  - Needle in a Haystack
+  - Hunting License
+  - Alien Saboteur
+  - Cave System
+  - Vessel Cartographer
+
+- Web
+  - Gunhead
+  - Orbital
+  - Passman
+  - Trapped Source
+  - TrapTrack
+  - Didactic Octo Paddle
+  - Drobots
+  - SpyBug
+  - UnEarthly Shop
+
+- References
 
 In no particular order, here are each of the sources used to document solutions for each challenge.
 
