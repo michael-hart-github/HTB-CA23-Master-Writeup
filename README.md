@@ -1,105 +1,113 @@
+# Table of contents
+
+- [Table of contents](#table-of-contents)
+- [Summary](#summary)
+- [Write ups](#write-ups)
+  - [Blockchain](#blockchain)
+  - [Cryptography](#cryptography)
+  - [Forensics](#forensics)
+  - [Hardware](#hardware)
+  - [Machine Learning](#machine-learning)
+  - [Misc](#misc)
+  - [Pwn](#pwn)
+  - [Reversing](#reversing)
+  - [Web](#web)
+- [References](#references)
+
 # Summary
 
 This document is intended to cover all of the solutions used to solve each challenge for HackTheBox (HTB) Cyber Apologlypse 2023 CTF Chanllenge (CA23).
 
 Keep in mind that, although this is intended to be a comprehensive list, the sources used were gathered from the HTB Discord server channel "[#ca23-writeups](https://discord.com/channels/473760315293696010/1088455142199787560)".
 
-# Table of contents
-
-- [Summary](#summary)
-- [Table of contents](#table-of-contents)
-- [Write ups](#write-ups)
-
 # Write ups
+## Blockchain
+- Navigating the Unknown
+- Shooting 101
+- The Art of Deception
 
-- Blockchain
-  - Navigating the Unknown
-  - Shooting 101
-  - The Art of Deception
+## Cryptography
+- Ancient Encodings
+- Elliptic Labyrinth
+- Elliptic Labyrinth Revenge
+- Biased Heritage
+- Colliding Heritage
+- Converging Visions
+- Inside the Matrix
+- Multipage Recyclings
+- Perfect Synchronization
+- Small StEps
 
-- Cryptography
-  - Ancient Encodings
-  - Elliptic Labyrinth
-  - Elliptic Labyrinth Revenge
-  - Biased Heritage
-  - Colliding Heritage
-  - Converging Visions
-  - Inside the Matrix
-  - Multipage Recyclings
-  - Perfect Synchronization
-  - Small StEps
+## Forensics
+- Artifacts of Dangerous Sightings
+- Bashic Ransomware
+- Interstellar C2
+- Pandora's Bane
+- Relic Maps
+- Alien Cradle
+- Extraterrestrial Persistence
+- Packet Cyclone
+- Plaintext Tleasure
+- Roten
 
-- Forensics
-  - Artifacts of Dangerous Sightings
-  - Bashic Ransomware
-  - Interstellar C2
-  - Pandora's Bane
-  - Relic Maps
-  - Alien Cradle
-  - Extraterrestrial Persistence
-  - Packet Cyclone
-  - Plaintext Tleasure
-  - Roten
-  - 
+## Hardware
+- Critical Flight
+- Debug
+- HM74
+- Secret Code
+- Timed Transmission
 
-- Hardware
-  - Critical Flight
-  - Debug
-  - HM74
-  - Secret Code
-  - Timed Transmission
+## Machine Learning
+- Reading the Stars
+- Last Hope
+- Mysterious Learnings
+- On the Rescue
+- Reconfiguration
+- Vision Chip
 
-- Machine Learning
-  - Reading the Stars
-  - Last Hope
-  - Mysterious Learnings
-  - On the Rescue
-  - Reconfiguration
-  - Vision Chip
+## Misc
+- Hijack
+- Persistence
+- Remote Computation
+- Restricted
+- Calibration
+- Janken
+- Nehebkaus Trap
+- The Chasms Crossing Conondrum
 
-- Misc
-  - Hijack
-  - Persistence
-  - Remote Computation
-  - Restricted
-  - Calibration
-  - Janken
-  - Nehebkaus Trap
-  - The Chasms Crossing Conondrum
+## Pwn
+- [Getting Started](Getting-Started)
+- Questionnaire
+- Initialise Connection
+- Labyrinth
+- Pandora's Box
+- Control Room
+- Kana
+- Math Door
+- Runic
+- Void
 
-- Pwn
-  - [Getting Started](Getting-Started)
-  - Questionnaire
-  - Initialise Connection
-  - Labyrinth
-  - Pandora's Box
-  - Control Room
-  - Kana
-  - Math Door
-  - Runic
-  - Void
+## Reversing
+- Shattered Tablet
+- She Shells C Shells
+- Needle in a Haystack
+- Hunting License
+- Alien Saboteur
+- Cave System
+- Vessel Cartographer
 
-- Reversing
-  - Shattered Tablet
-  - She Shells C Shells
-  - Needle in a Haystack
-  - Hunting License
-  - Alien Saboteur
-  - Cave System
-  - Vessel Cartographer
+## Web
+- Gunhead
+- Orbital
+- Passman
+- Trapped Source
+- TrapTrack
+- Didactic Octo Paddle
+- Drobots
+- SpyBug
+- UnEarthly Shop
 
-- Web
-  - Gunhead
-  - Orbital
-  - Passman
-  - Trapped Source
-  - TrapTrack
-  - Didactic Octo Paddle
-  - Drobots
-  - SpyBug
-  - UnEarthly Shop
-
-- References
+# References
 
 In no particular order, here are each of the sources used to document solutions for each challenge.
 
