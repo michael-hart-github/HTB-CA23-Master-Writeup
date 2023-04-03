@@ -3,7 +3,7 @@
   - [Files](#files)
 - [Instructions](#instructions)
   - [Running `gs`](#running-gs)
-  - [Modfying `wrapper.py`](#modfying-wrapperpy)
+  - [Modifying `wrapper.py`](#modifying-wrapperpy)
 - [Flag](#flag)
   - [Issues encountered](#issues-encountered)
 - [Lessons learned](#lessons-learned)
@@ -52,7 +52,7 @@ Running gs `./gs` will show a [stack frame layout](https://en.wikipedia.org/wiki
 
 We are instructed to fill and overwrite the 32-byte buffer of `gs` and are given an example of using the characters A and B.
 
-There are a few ways we could approach filling the buffer. The simpliest is to use the prompt provided `>>` in gs, and enter varrying amount of A's, B's, etc. through trial and error, opening the file each time it isn't long enough.
+There are a few ways we could approach filling the buffer. The simplest is to use the prompt provided `>>` in gs, and enter varying amount of A's, B's, etc. through trial and error, opening the file each time it isn't long enough.
 
 A faster alternative is to use a command when launching the file (credit: [siunam321](https://siunam321.github.io/ctf/Cyber-Apocalypse-2023/Pwn/Getting-Started/))
 
@@ -62,7 +62,7 @@ After performing the [stack buffer overflow](https://en.wikipedia.org/wiki/Stack
 
 With this new information, it is now time to modify `wrapper.py`
 
-## Modfying `wrapper.py`
+## Modifying `wrapper.py`
 
 After opening `wrapper.py` in your text editor, you will see instructions to [install pwntools](https://docs.pwntools.com/en/stable/install.html), if you have not done so already. You will also want to make sure that you are using `python3` to run wrapper.
 

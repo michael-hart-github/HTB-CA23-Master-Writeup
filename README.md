@@ -16,7 +16,7 @@
 
 # Summary
 
-This document is intended to cover all of the solutions used to solve each challenge for HackTheBox (HTB) Cyber Apologlypse 2023 CTF Chanllenge (CA23).
+This document is intended to cover all of the solutions used to solve each challenge for HackTheBox (HTB) Cyber Apocalypse 2023 CTF Challenge (CA23).
 
 Keep in mind that, although this is intended to be a comprehensive list, the sources used were gathered from the HTB Discord server channel "[#ca23-writeups](https://discord.com/channels/473760315293696010/1088455142199787560)".
 
