@@ -76,8 +76,8 @@ Keep in mind that, although this is intended to be a comprehensive list, the sou
 - The Chasms Crossing Conondrum
 
 ## Pwn
-- [Getting Started](Getting-Started)
-- Questionnaire
+- [Getting Started](Pwn/Getting-Started/GettingStarted.md)
+- [Questionnaire](Pwn/Questionnaire/Questionnaire.md)
 - Initialise Connection
 - Labyrinth
 - Pandora's Box
