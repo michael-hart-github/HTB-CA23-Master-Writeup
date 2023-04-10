@@ -207,8 +207,9 @@ By comparison, the YouTuber did a pretty simple solution, without using Ghidra a
 1. Do not use ChatGPT to write instructions of how to use software.
 2. I need to get familiar with `gdb`.
 3. I need to install `gef`.
-4. I should try and read up on `readelf`. It seems to be niche, but could provide some real value.
-5. 
+4. I should try and read up on `readelf`. It seems slightly niche, but could provide some real value.
+5. ...Same goes for `objdump`
+6. 
 
 # References
 
