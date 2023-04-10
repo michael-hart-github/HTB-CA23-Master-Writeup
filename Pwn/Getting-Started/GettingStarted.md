@@ -18,7 +18,7 @@ We are given a `.zip` containing several files. We are also given a docker conta
 
 ## Files
 
-[GettingStarted.zip](/Getting-Started/GettingStarted.zip)
+[GettingStarted.zip](/Pwn/Getting-Started/GettingStarted.zip)
 
 # Instructions
 
