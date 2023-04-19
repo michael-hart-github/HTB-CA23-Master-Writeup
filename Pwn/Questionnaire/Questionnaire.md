@@ -2,7 +2,7 @@
   - [Description](#description)
   - [Files](#files)
 - [Instructions](#instructions)
-  - [Examining the files](#examining-the-files)
+  - [File examination](#file-examination)
 - [Step-by-step](#step-by-step)
   - [Questions 1-3](#questions-1-3)
   - [Question 4](#question-4)
@@ -44,9 +44,6 @@ The `.zip` contains two files:
 
 [Questionnaire.zip](/Pwn/Questionnaire/Questionnaire.zip)
 
-
-
-
 # Instructions
 
 First, you will need to unzip the file
@@ -63,7 +60,7 @@ test:   ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked,
 test.c: C source, ASCII text
 ```
 
-## Examining the files
+## File examination
 
 `test` is a simple compiled c file. There's nothing of note to point out for this challenge.
 
