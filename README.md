@@ -22,7 +22,7 @@ Keep in mind that, although this is intended to be a comprehensive list, the sou
 
 # Write ups
 ## Blockchain
-- [Navigating the Unknown](Blockchain/Navigating-the-unknown/)
+- [Navigating the Unknown](/Blockchain/Navigating-the-unknown/Navigating-the-unknown.md)
 - Shooting 101
 - The Art of Deception
 
