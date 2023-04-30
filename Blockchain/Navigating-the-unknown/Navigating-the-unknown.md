@@ -3,16 +3,17 @@
   - [Files](#files)
 - [Instructions](#instructions)
   - [File examination](#file-examination)
-    - [Two ports for every blockchain challenge](#two-ports-for-every-blockchain-challenge)
-    - [Two smart contract source files for every blockchain challenge](#two-smart-contract-source-files-for-every-blockchain-challenge)
-    - [Blockchain interaction requirements](#blockchain-interaction-requirements)
+  - [Blockchain interaction requirements](#blockchain-interaction-requirements)
 - [Step-by-step](#step-by-step)
-  - [PLACEHOLDER TEXT](#placeholder-text)
-    - [Method 1 - the simple way](#method-1---the-simple-way)
-    - [Method 2 - blahblah](#method-2---blahblah)
-    - [Method 3 - blahblahblah](#method-3---blahblahblah)
+  - [Method 1 - Metamask and Remix IDE](#method-1---metamask-and-remix-ide)
+    - [Requirements](#requirements)
+  - [Method 2 - Foundry-rs](#method-2---foundry-rs)
+    - [Requirements](#requirements-1)
+  - [Method 3 - web3py 1](#method-3---web3py-1)
+  - [Method 4 - Using web3py 2 (ABI)](#method-4---using-web3py-2-abi)
+  - [Method 5 - py-solc-x and web3py 3](#method-5---py-solc-x-and-web3py-3)
+  - [Method 6 - ChatGPT (web3py 4)](#method-6---chatgpt-web3py-4)
 - [Flag](#flag)
-  - [Issues encountered](#issues-encountered)
 - [Lessons learned](#lessons-learned)
 - [References](#references)
   - [Additional resources](#additional-resources)
@@ -25,29 +26,29 @@ Navigating the Unknown is rated as Very Easy under the Blockchain section of Cyb
 
 > Your advanced sensory systems make it easy for you to navigate familiar environments, but you must rely on intuition to navigate in unknown territories. Through practice and training, you must learn to read subtle cues and become comfortable in unpredictable situations. Can you use your software to find your way through the blocks?
 
-This challenge gives us a `.zip` file, as well as a docker container with 2 ports.
-
 ## Files
 
-[Navigating-the-Unknown.zip](/Blockchain/Navigating-the-unknown/Navigating-the-Unknown.zip)
+[Navigating the Unknown](/Blockchain/Navigating-the-unknown/Navigating-the-Unknown.zip)
+
+> Note: You will also be given a docker container with two ports.
 
 # Instructions
 
-First, you will need to unzip the folder
+First, unzip the folder
 
 ```
 $ unzip Navigating-the-Unknown.zip
 ```
 
-This will extract the following files to your current directory:
-* `blockchain_navigating_the_unknown` (Directory)
+This will extract a folder and several files into the current directory:
+* `blockchain_navigating_the_unknown`
   * `Unknown.sol`
   * `Setup.sol`
   * `README.md`
 
 ## File examination
 
-Running `file` with the wildcard `*` will show us file info for all of the files extracted
+Run `file` with the wildcard `*` to see file info for the extracted files.
 
 ```
 $ cd blockchain_navigating_the_unknown
@@ -57,60 +58,52 @@ Setup.sol:   Java source, ASCII text
 Unknown.sol: ASCII text
 ```
 
-Running `README.md` through a text editor will return some interesting info:
-### Two ports for every blockchain challenge
-*  `tcp` port
-   *  The `tcp` port is used to retrieve info about connecting to the private chain (private key and targets contact address).**
-*  `rpc` URL
-   *  You will need this port in order to connect to the private chain
-* You can determine which port is which by trying to connect to each with `netcat`; the one that works is the `tcp` port
+Reading the contents of `README.md` will return some interesting info:
 
-### Two smart contract source files for every blockchain challenge
-* `Setup.sol` - Contains a single contract, `Setup`
-  * Initialization actions come from `Setup` from 3 functions
-    * `constructor()` - Called once when contract is deployed
-    * `TARGET()` - Returns the address of the challenge contract
-    * `isSolved()` - Contains the final objective; returns `true` if solved
-* The challenge file
-  * Analyze their source carefully to figure out how to break them
-    * The objective will be specified in `isSolved()`
+```
+$ cat README.md
+```
 
-### Blockchain interaction requirements
+1. Two ports for every blockchain challenge
+   1. `tcp` port
+      1. The `tcp` port will return *info* about the private chain; it will show the private key and targets contact address.
+   2. `rpc` URL
+      1. Needed in order to *connect* to the private chain
+      
+    > Note: You can determine which port is which by trying to connect to each with `netcat` (`nc`) - the one that works is the `tcp` port
 
-In order to work on blockchain challenges, you will need the following key requirements:
+2. Two smart contract source files for every blockchain challenge
+   1. `Setup.sol` contains a single contract: `Setup`
+      1. Initialization functions come from `Setup`
+         1. Function 1: `constructor()` - Called a single time, when contract is deployed
+         2. Function 2: `TARGET()` - Returns the address of the challenge contract
+         3. Function 3: `isSolved()` - Contains the final objective, returns `true` if solved
+   2. The challenge file
+      1. The way to break the challenge file will be specified in `isSolved()`
 
-* Private key with ether
-  * Ether is provided via `tcp` endpoint
-* Target contract address
-  * `Setup` and `Target` address both provide this
-* `rcp` URL
-  * Provided via a port in each blockchain challenge
-* Use `web3py` or `web3js`
-  * Use either web3 service in order to perform function calls in smart contract, or any other action needed
+## Blockchain interaction requirements
 
->Note: You could use `foundry-rs` instead of either `web3` choice. `foundry-rs` is an easy-to-use cli utility, but there are less examples online
+To work on blockchain challenges, you need:
+
+1. Private key with ether
+   1. Ether is provided via `tcp` endpoint
+2. Target contract address
+   1. `Setup` and `Target` address both provide this
+3. `rcp` URL
+   1. Provided via a port in each blockchain challenge
+4. Use `web3py` or `web3js`
+   1. Either web3 service can perform function calls in smart contracts
+
+> Note: You can use `foundry-rs` instead of `web3`. `foundry-rs` is an easy-to-use cli utility, but is poorly documented.
 
 # Step-by-step
 
-Now that we know what the included files are, what they do, and some of the core requirements for blockchain challenges, let's look at some methods to solve this!
+Now that we know what the included files *are*, what they *do*, and have the core requirements, let's start on the challnege and look at some methods to solve this!
 
-## PLACEHOLDER TEXT
+* Port 31092 doesn't work (it's rpc)
+* Port 31700 works (it's tcp)
 
-PLACEHOLDER TEXT
-
-### Method 1 - the simple way
-kypanz claims this is the simple way. He's got the longest post, but looks to have a lot of screenshots. :shrug:
-
-...
-
-recap of what I covered in file exam
-
-...
-
-port 31092 doesn't work (it's rpc)
-port 31700 works (it's tcp)
-
-When we netcat to the `tcp` port, we get a prompt for various options
+Running `nc` against the `tcp` port prompts us with various options:
 
 ```
 $ nc 165.22.1167 31700
@@ -129,30 +122,107 @@ Target contract : [snip]
 Setup contract  : [snip]
 ```
 
-kypanz claims we will not need to use `web3js`, `web3py`, ether, etc. because "the code is not gonna be automated. So, instead we're going to use:
-* Metamask (crypto wallet)
-* Remix IDE (an IDE for solidity Smart contracts)
-* Smart contracts (?)
+## Method 1 - Metamask and Remix IDE
+[kypanz](https://kypanz.github.io/jekyll/update/2023/03/24/Navigating-the-unknown.html) and [0xJs](https://medium.com/@039305660xJs/htb-cyber-apocalypse-ctf-blockchain-8fa83e22f419) suggest using Metamask and Remix IDE.
 
-(Paraphrasing) "We are going to interact with the smart contracts in a simpler way to understand what is happening on a general level."
+### Requirements
+* `Metamask` (A crypto wallet)
+* `Remix IDE`
 
-Need to download Metamask
+1. Open Metamask
+2. The rpc URL is 165.22.116.7:31092, so the network we add in Metamask will read `http://165.22.116.7:31092`
+3. In order to add the network, we need the `Chain ID`
+   1. To get around this, enter dummy info into the field. The error message will show you the following:
+   > The RPC URL you have entered returned a different Chain ID (**31337**). Please update the Chain ID to match the RPC URL of the network you are trying to add.
+   2. Therefore, the Chain ID is `31337`.
 
-### Method 2 - blahblah
+> Note: After entering the correct Chain ID, you will see similar notification for Currency Symbol. You can change the Currency Symbol to GO, but it is not required.
 
-### Method 3 - blahblahblah
+You now have connected to the right *network*, but need to switch to the right *account*.
+
+4. Profile -> Import Account
+   1. Enter the `private key` gathered from the earlier connection:
+   0xb331b8bcd8882a6d755ee6517d9124feba3563d7d8c0b969c1de10837a21e456
+   2. You can confirm you have the correct account in `Metamask` by checking the `address` given in the `nc` connection.
+5. After reviewing the contract code in Remix, compile it
+6. Before deploying the contract, change the the `environment` to `Injected Provider - MetaMask`
+   1. Changing the environmental variable here uses a web3 option for us!
+7. Deploy `Setup.sol`
+   1. After deploying in Remix, you will need to go back to Metamask and select Connect.
+8. We will now instantiate a contract instead of deploying a new one.
+   1. Instantiation means that we will use Remix to *create a copy* of the original contract, using the *same functions*. It will work the same because it has the same structure. We are not "recreating the wheel", we're copying what already exists.
+9.  Grab the `Setup contract` address and put it into the `At Address` of the instantiated contract, in the `deployment` field in Remix.
+10. Now instantiate the `Unknown.sol` contract using `Target contract` address. (It starts with "0x424..."). Again, put the address under the `deployment` field in Remix.
+11. Expand the fields for `Setup` and `Unknown`. Input `10` into `Unknown` -> `updateSensor`. You will see a popup in Metamask asking you to confirm. Hit `confirm`.
+12. Finally, reconnect to the server to retrieve the flag
+```
+$ nc 165.22.1167 31700
+1 - Connection Information
+2 - Restart Instance
+3 - Get flag
+action? 3
+FLAG=HTB{9P5_50FtW4R3_UPd4t3D}
+```
+
+## Method 2 - Foundry-rs
+
+[nikhilmemane09](https://medium.com/@nikhilmemane09/htb-cyber-apocalypse-2023-owning-smart-contracts-navigating-the-unknown-a5e821fd2bac), [SiriusA](https://sirius-a.github.io/ctf-writeups/writeups/2023/HTB-cyber-apocalypse/blockchain_navigating_the_unknown/), and [Cryptopone](https://gitlab.com/Cryptopone/cyberapocalypse2023-writeups/-/tree/main/Blockchain/Navigating%20the%20Unknown) advocate using foundryrs.
+
+### Requirements
+
+* [Foundry-rs](https://github.com/foundry-rs/foundry)
+
+1. Examine both `Setup.sol` and `Unknown.sol`
+   1. Make note of the function `updateSensors()` in `Unknown.sol`
+2. `nc` the `tcp` port to gather the `private key` and `target address`
+3. If you have not done so already, install `foundryrs` using `foundryup`
+4. Run the foundryrs command `cast`
+```
+$ cast send --rpc-url=<rpc-url> --private-key=<your-private-key> <target-address> "<function-signature>" <argument>
+```
+
+> Note: The `function-signature` will be `updateSensors()`. The `argument` will be `10`.
+
+5. To confirm whether the above cast was successful, check the function `isSolved()`
+```
+$ cast send --rpc-url=<rpc-url> --private-key=<your-private-key> <setup-address> "<function-signature>"
+```
+
+> Note that the `target-address` has been changed to `setup-address`. The `function-signature` will be `isSolved()`.
+
+6. The response should look like:
+
+> 0x000[snip]001
+
+The `1` indicates that the challenge is solved.
+
+7. `nc` into `tcp` to get the flag 
+
+## Method 3 - web3py 1
+
+[Hackbrain](https://hakbrain.notion.site/Navigating-The-Unknown-5d2fb22c652b4f1c91558269c0fdd81b) suggests using Python to solve the challenge. I don't understand the method well enough to speak to it. I simply encourage you to check out [his solution](https://hakbrain.notion.site/Navigating-The-Unknown-5d2fb22c652b4f1c91558269c0fdd81b), if it interests you.
+
+## Method 4 - Using web3py 2 (ABI)
+
+[thewhiteh4t](https://twc1rcle.com/ctf/team/ctf_writeups/cyber_apocalypse_2023/) offers a similar method using web3py to solve the challenge using `Application Binary Interface`
+
+## Method 5 - py-solc-x and web3py 3
+
+[ilter](https://ilter.tech/blog/htb-blockchain-navigating-the-unknown/) suggests using py-solc-x to compile the contracts, and then uses web3py.
+
+## Method 6 - ChatGPT (web3py 4)
+
+[LazyTitan33](https://github.com/LazyTitan33/CTF-Writeups/blob/main/HTB%20-%20CyberApocalypse_2023/Blockchain/Navigating_the_Unknown.md) mentioned a novel approach, using ChatGPT to get an answer with web3
 
 # Flag
 
-HTB{}
-
-## Issues encountered
-
-* When I tried to do this, it blahed
+HTB{9P5_50FtW4R3_UPd4t3D}
 
 # Lessons learned
 
-1. I should learn about
+1. Learn about `Metamask` and `Remix IDE`
+2. Learn more about foundry-rs
+3. Of the write ups I read, no one used web3js. Interesting!
 
 # References
 
@@ -174,4 +244,6 @@ In no particular order
 
 ## Additional resources
 
-* Link to something I found while writing this
+* Metamask [download link](https://metamask.io/)
+* Remix IDE [download link](https://remix.ethereum.org/)
+* Foundry-rs [download link](https://github.com/foundry-rs/foundry)
